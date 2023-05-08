@@ -57,9 +57,12 @@
 .setting-option {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   position: relative;
   padding: 10px;
-  font-family: cursive, serif;
+}
+.setting-option label {
+  padding-right: 100px;
 }
 .wrapper {
   position: absolute;
@@ -124,9 +127,8 @@
 .mode-dark .highlighted-container-top {
   background-color: #303030 !important;
 }
-.mode-dark .trash-container{
+.mode-dark .trash-container {
   background-color: #303030 !important;
-
 }
 .mode-dark .trash-container-bottom {
   background-color: #303030 !important;
@@ -234,6 +236,9 @@
 }
 .mode-dark .navigation-menu-top .navigation-menu-back-btn {
   background-color: transparent;
+}
+.mode-dark .help {
+  background-color: #303030 !important;
 }
 .mode-dark .active {
   background-color: #fff !important;

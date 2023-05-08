@@ -158,6 +158,9 @@ const settingsContainer = document.querySelector(".settings-container");
 const showInstractionTextToggle = document.querySelector(
   ".show-instraction-text-toggle"
 );
+
+const helpContainer = document.querySelector(".help");
+
 const animationsToggle = document.querySelector(".animations-toggle");
 const enableDarkModeTogle = document.querySelector(".enable-dark-mode-toggle");
 

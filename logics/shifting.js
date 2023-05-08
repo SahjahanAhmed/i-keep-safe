@@ -4,6 +4,7 @@ btnNotes.addEventListener("click", () => {
   highLightedContainer.style.display = "none";
   pinnedContainer.style.display = "none";
   settingsContainer.style.display = "none";
+  helpContainer.style.display = "none";
   addNoteBtnPlus.style.display = "block";
   btnNotes.classList.add("active");
   emptyMsg.style.display = "block";
@@ -27,6 +28,7 @@ btnTrash.addEventListener("click", () => {
   highLightedContainer.style.display = "none";
   pinnedContainer.style.display = "none";
   settingsContainer.style.display = "none";
+  helpContainer.style.display = "none";
 
   trashContainerTop.style.display = "flex";
   selectTrashBtn.style.display = "block";
@@ -52,6 +54,7 @@ btnHighlighted.addEventListener("click", () => {
   trashContainer.style.display = "none";
   addNoteBtnPlus.style.display = "none";
   settingsContainer.style.display = "none";
+  helpContainer.style.display = "none";
 
   emptyMsg.style.display = "none";
   pinnedContainer.style.display = "none";
@@ -90,6 +93,7 @@ btnPinned.addEventListener("click", () => {
   highLightedContainer.style.display = "none";
   trashContainer.style.display = "none";
   settingsContainer.style.display = "none";
+  helpContainer.style.display = "none";
 
   addNoteBtnPlus.style.display = "none";
   emptyMsg.style.display = "none";
@@ -108,6 +112,7 @@ btnSetting.addEventListener("click", () => {
   trashContainer.style.display = "none";
   pinnedContainer.style.display = "none";
   addNoteBtnPlus.style.display = "none";
+  helpContainer.style.display = "none";
   emptyMsg.style.display = "none";
 
   btnSetting.classList.add("active");
@@ -118,5 +123,17 @@ btnSetting.addEventListener("click", () => {
   btnHelp.classList.remove("active");
 });
 btnHelp.addEventListener("click", () => {
-  alert();
+  helpContainer.style.display = "flex";
+  settingsContainer.style.display = "none";
+  highLightedContainer.style.display = "none";
+  trashContainer.style.display = "none";
+  pinnedContainer.style.display = "none";
+  addNoteBtnPlus.style.display = "none";
+  emptyMsg.style.display = "none";
+  btnHelp.classList.add("active");
+  btnSetting.classList.remove("active");
+  btnPinned.classList.remove("active");
+  btnNotes.classList.remove("active");
+  btnTrash.classList.remove("active");
+  btnHighlighted.classList.remove("active");
 });
