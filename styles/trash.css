@@ -1,0 +1,141 @@
+.trash-container {
+  position: absolute;
+  height: 100% !important;
+  width: 100% !important;
+  top: 0;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+.trash-container-top {
+  width: 100vw;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.trash-container-top-left {
+  display: flex;
+  gap: 8px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+}
+.trash-container-top-middle {
+  font-size: 20px;
+  color: #303030;
+  font-family: ubuntu, sans-serif;
+}
+.trash-container-top-right {
+  display: flex;
+  gap: 8px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+}
+
+.select-trash-btn,
+.cancel-trash-btn,
+.select-all-trash-btn,
+.restore-trash-btn,
+.delete-trash-forever-btn {
+  border: none;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 3px 5px;
+  font-weight: bold;
+  background-color: #9994;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.select-trash-btn:hover {
+  background-color: #fff;
+  color: #303030;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+}
+.cancel-trash-btn:hover {
+  background-color: #fff;
+  color: #303030;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+}
+.select-all-trash-btn:hover {
+  background-color: #fff;
+  color: #303030;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+}
+.restore-trash-btn:hover {
+  background-color: #fff;
+  color: #303030;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+}
+.delete-trash-forever-btn:hover {
+  background-color: #fff;
+  color: #303030;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+}
+@media screen and (max-width: 500px) {
+  .select-trash-btn,
+  .cancel-trash-btn,
+  .select-all-trash-btn,
+  .restore-trash-btn,
+  .delete-trash-forever-btn {
+    font-size: 12px;
+  }
+  .trash-container-top {
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .select-trash-btn,
+  .cancel-trash-btn,
+  .select-all-trash-btn,
+  .restore-trash-btn,
+  .delete-trash-forever-btn {
+    font-size: 10px;
+    padding: 2px 4px;
+  }
+  .trash-container-top-left {
+    gap: 4px;
+  }
+  .trash-container-top-right {
+    gap: 4px;
+  }
+  .trash-container-top {
+    gap: 8px;
+  }
+  .trash-container-top-middle {
+    transform: scale(0.8);
+  }
+}
+
+.trash-container-bottom {
+  /* background-color: aqua; */
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.trash-msg {
+  position: absolute;
+  top: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  background-color: ghostwhite;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  display: none;
+  color: #303030;
+}
+.trash-checkbox {
+  display: block !important;
+}

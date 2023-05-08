@@ -1,0 +1,241 @@
+.btn-hover {
+  transition: 0.3s;
+}
+.btn-hover:hover {
+  color: #fff;
+}
+.save-btn-hover {
+  transition: 0.3s;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+.save-btn-hover:hover {
+  background-color: #ff6347;
+  color: #fff;
+  box-shadow: 0 0 2px 1px #fff;
+}
+.display-none {
+  display: none;
+}
+.d-block {
+  display: block;
+}
+.d-flex {
+  display: flex !important;
+}
+.d-none {
+  display: none !important;
+}
+.highlighted {
+  background-color: yellowgreen !important;
+}
+
+.to-single-column {
+  width: 90vw !important;
+  height: 20vh !important;
+}
+@media screen and (max-width: 500px) {
+  .to-single-column {
+    height: 15vh !important;
+  }
+}
+
+.active {
+  background-color: #303030 !important;
+  color: #fff !important;
+}
+
+.transition-none * {
+  transition: none !important;
+}
+.shadow-sm {
+  box-shadow: 0 0 0 0.5px rgba(0, 0, 0, 0.5);
+}
+.bradius-1 {
+  border-radius: 10px;
+}
+
+.setting-option {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 10px;
+  font-family: cursive, serif;
+}
+.wrapper {
+  position: absolute;
+  right: 0;
+}
+.toggle-btn {
+  width: 30px;
+  height: 18px;
+  background-color: #999;
+  box-shadow: 0 0 0 1px #808080;
+  border: none;
+  border-radius: 36%;
+  position: relative;
+  margin: 20px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.toggle-btn > div {
+  height: 12px;
+  width: 12px;
+  background-color: #555;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  transform: translateY(-50%);
+  transition: all 0.2s ease-in-out;
+}
+
+.toggle-on {
+  left: 14.4px !important;
+  background-color: rgb(23, 85, 157) !important;
+}
+.bg-skyblue {
+  background-color: skyblue !important;
+}
+
+.no-animation * {
+  transition: none !important;
+}
+
+.mode-dark .note-container {
+  background-color: #606060;
+  box-shadow: 0 0 0 1px #fff;
+}
+.mode-dark .notes-container {
+  background-color: #303030 !important;
+}
+.mode-dark .settings-container {
+  background-color: #303030 !important;
+}
+.mode-dark .pinned-container-bottom {
+  background-color: #303030 !important;
+}
+
+.mode-dark .highlighted-container-bottom {
+  background-color: #303030 !important;
+}
+.mode-dark .pinned-container-top {
+  background-color: #303030 !important;
+}
+.mode-dark .highlighted-container-top {
+  background-color: #303030 !important;
+}
+.mode-dark .trash-container{
+  background-color: #303030 !important;
+
+}
+.mode-dark .trash-container-bottom {
+  background-color: #303030 !important;
+}
+.mode-dark .trash-container-top {
+  background-color: #303030 !important;
+}
+
+.mode-dark .notes-container .notes-top-left button {
+  color: #fff;
+  background-color: transparent;
+}
+.mode-dark .notes-container .notes-top-right button {
+  color: #fff;
+  background-color: transparent;
+}
+.mode-dark .notes-container .notes-top-left button:hover {
+  color: #303030;
+  background-color: #fff;
+}
+
+.mode-dark .notes-container small {
+  border-color: #fff;
+}
+.mode-dark .add-note-btn small {
+  border-color: #fff;
+  color: #fff;
+}
+
+.mode-dark .settings-header {
+  color: #fff;
+}
+.mode-dark .setting-option {
+  background-color: #606060;
+  color: #fff;
+}
+
+.mode-dark .trash-container-top-middle {
+  color: #fff;
+}
+.mode-dark .trash-container-top-left {
+  background-color: transparent;
+}
+.mode-dark .trash-container-top-right {
+  background-color: transparent;
+}
+.mode-dark .trash-container button {
+  background-color: transparent;
+  color: #fff;
+}
+.mode-dark .trash-container button:hover {
+  background-color: #fff;
+  color: #303030;
+}
+
+.mode-dark .highlighted-container-top-middle {
+  color: #fff;
+}
+.mode-dark .highlighted-container-top-left {
+  background-color: transparent;
+}
+.mode-dark .highlighted-container-top-right {
+  background-color: transparent;
+}
+.mode-dark .highlighted-container button {
+  background-color: transparent;
+  color: #fff;
+}
+.mode-dark .highlighted-container button:hover {
+  background-color: #fff;
+  color: #303030;
+}
+
+.mode-dark .pinned-container-top-middle {
+  color: #fff;
+}
+.mode-dark .pinned-container-top-left {
+  background-color: transparent;
+}
+.mode-dark .pinned-container-top-right {
+  background-color: transparent;
+}
+.mode-dark .pinned-container button {
+  background-color: transparent;
+  color: #fff;
+}
+.mode-dark .pinned-container button:hover {
+  background-color: #fff;
+  color: #303030;
+}
+
+.mode-dark .navigation-menu {
+  background-color: #303030;
+  color: #fff;
+}
+
+.mode-dark .navigation-menu-top {
+  color: #fff;
+}
+.mode-dark .navigation-menu button {
+  color: #fff;
+}
+.mode-dark .navigation-menu button small {
+  border-color: #fff;
+}
+.mode-dark .navigation-menu-top .navigation-menu-back-btn {
+  background-color: transparent;
+}
+.mode-dark .active {
+  background-color: #fff !important;
+  color: #303030 !important;
+}

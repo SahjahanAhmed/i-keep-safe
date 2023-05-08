@@ -1,0 +1,105 @@
+.navigation-menu-container {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: -2000px;
+  display: flex;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+  background-color: #9995;
+}
+.navigation-menu {
+  width: 20%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  box-shadow: 10px 0px 10px rgba(0, 0, 0, 0.3);
+}
+.navigation-menu-top {
+  margin-top: 70px;
+  padding-left: 10%;
+  color: #303030;
+  font-family: ubuntu, sans-serif;
+  /* background-color: #111; */
+}
+.navigation-menu-top > button {
+  border: none;
+  background-color: transparent;
+  font-size: 26px;
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  color: #303030;
+  cursor: pointer;
+  border-radius: 100%;
+}
+
+.navigation-menu-back-btn {
+  position: relative;
+}
+.navigation-menu-back-btn-msg {
+  position: absolute;
+  background-color: #fff;
+  color: #303030;
+  font-size: 10px;
+  width: 114px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 2px 4px;
+  border-left: 4px solid #303030;
+  display: none;
+  left: 17px;
+}
+
+.navlist {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 96%;
+}
+.navlist li {
+  list-style-type: none;
+}
+.navlist button {
+  background-color: transparent;
+  border: none;
+  padding: 16px;
+  padding-left: 50px;
+  width: 100%;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: #303030;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.navlist button:hover {
+  background-color: #707070;
+  color: #fff;
+}
+.navlist button i {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 960px) {
+  .navigation-menu {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .navigation-menu {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .navigation-menu {
+    width: 80%;
+  }
+}

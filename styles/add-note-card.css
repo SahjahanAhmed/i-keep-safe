@@ -1,0 +1,113 @@
+.add-note-card-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  transition: all 0.3s ease-in-out;
+  top: -2000px;
+}
+
+.add-note-card {
+  background-color: #ff6347;
+  border-radius: 10px;
+  padding: 10px;
+  width: 40vw;
+  height: 50vh;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+}
+.add-note-card > div {
+  /* align-self: center; */
+  text-align: center;
+}
+
+.add-note-card .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.back-btn-top-left > button {
+  background-color: transparent;
+  border: none;
+  transform: translateY(-10px);
+  font-size: 18px;
+  cursor: pointer;
+}
+.top-middle {
+  display: flex;
+  margin: 5px 0;
+  gap: 20px;
+}
+.top-middle > .size,
+.color {
+  background-color: #fff;
+  padding: 4px;
+  border-radius: 10px;
+}
+.size > select,
+.color > select {
+  border: none;
+  outline: none;
+  font-weight: bold;
+}
+
+.top-right > button {
+  border: none;
+  border-radius: 10px;
+  padding: 4px;
+  font-weight: bold;
+  font-size: 16px;
+  transform: translateY(-10px);
+  cursor: pointer;
+}
+
+.bottom {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.title > input {
+  min-width: 40px;
+  max-width: 500px;
+  min-height: 40px;
+  max-height: 100px;
+  width: 90%;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  padding: 5px;
+  font-weight: bold;
+}
+
+.description > textarea {
+  min-width: 40px;
+  max-width: 500px;
+  width: 90%;
+  min-height: 110px;
+  max-height: 300px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  padding: 5px;
+}
+
+@media screen and (max-width: 1000px) {
+  .add-note-card {
+    width: 80vw;
+    height: 50vh;
+  }
+  .top-middle {
+    transform: translateY(20px);
+  }
+}
+@media screen and (max-width: 500px) {
+  .add-note-card {
+    width: 90vw;
+    height: 50vh;
+  }
+}

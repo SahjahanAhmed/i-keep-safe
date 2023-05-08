@@ -1,0 +1,106 @@
+.pinned-container {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+.pinned-container-top {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.pinned-container-top-left {
+  display: flex;
+  gap: 8px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+}
+.pinned-container-top-middle {
+  font-size: 20px;
+  color: #303030;
+  font-family: ubuntu, sans-serif;
+  text-align: center;
+}
+.pinned-container-top-right {
+  display: flex;
+  gap: 8px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+}
+.pinned-container-top button {
+  border: none;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 3px 5px;
+  font-weight: bold;
+  background-color: #9994;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.select-pinned-btn:hover {
+  background-color: #fff;
+  color: #303030;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+}
+.cancel-pinned-btn {
+  display: none;
+}
+.cancel-pinned-btn:hover {
+  background-color: #fff;
+  color: #303030;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+}
+.select-all-pinned-btn:hover {
+  background-color: #fff;
+  color: #303030;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+}
+.unpin-pinned-btn:hover {
+  background-color: #fff;
+  color: #303030;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+}
+@media screen and (max-width: 370px) {
+  .pinned-container-top-middle {
+    font-size: 16px;
+  }
+  .pinned-container-top button {
+    font-size: 12px;
+  }
+}
+.pinned-container-bottom {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pinned-msg {
+  position: absolute;
+  top: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  background-color: ghostwhite;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  color: #303030;
+  display: none;
+}

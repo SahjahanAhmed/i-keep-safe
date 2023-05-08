@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/header.css" />
+    <link rel="stylesheet" href="./styles/add-note-card.css" />
+    <link rel="stylesheet" href="./styles/utils.css" />
+    <link rel="stylesheet" href="./styles/notes-container.css" />
+    <link rel="stylesheet" href="./styles/edit-note-card.css" />
+    <link rel="stylesheet" href="./styles//navigation-menu.css" />
+    <link rel="stylesheet" href="./styles/trash.css" />
+    <link rel="stylesheet" href="./styles/highlighted.css" />
+    <link rel="stylesheet" href="./styles/pinned.css" />
+    <link rel="stylesheet" href="./styles//settings.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script defer src="./logics/constants.js"></script>
+    <script defer src="./logics/mouseenter.js"></script>
+    <script defer src="./logics/add-note.js"></script>
+    <script defer src="./logics/load-note.js"></script>
+    <script defer src="./logics/delete-note.js"></script>
+    <script defer src="./logics/edit-note.js"></script>
+    <script defer src="./logics/./select.js"></script>
+    <script defer src="./logics/orientation.js"></script>
+    <script defer src="./logics//shifting.js"></script>
+    <script defer src="./logics//trash.js"></script>
+    <script defer src="./logics/restore.js"></script>
+    <script defer src="./logics/delete-forever.js"></script>
+    <script defer src="./logics/highlighted.js"></script>
+    <script defer src="./logics/pinned.js"></script>
+    <script defer src="./logics/search.js"></script>
+    <script defer src="./logics/size&color.js"></script>
+    <script defer src="./logics/settings.js"></script>
+
+    <title>i keep safe</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="left-header">
+          <div class="left-header-menu">
+            <div>
+              <a href="/">
+                <img
+                  class="profile-img"
+                  width="40px"
+                  src="./images//SJ.jpg"
+                  alt="profile-image"
+                />
+              </a>
+              <div class="navigation-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+                <small class="navigation-menu-btn-msg"
+                  >Open navigation menu</small
+                >
+              </div>
+            </div>
+            <div class="orientation-buttons">
+              <button class="orientation-1-btn">
+                <i class="fa fa-pause"></i>
+              </button>
+              <button class="orientation-2-btn">
+                <i class="fa fa-square"></i>
+                <i class="fa fa-square"></i>
+                <i class="fa fa-square"></i>
+                <i class="fa fa-square"></i>
+              </button>
+              <small class="single-column-view">Single-column view</small>
+              <small class="multi-column-view">Multi-column view</small>
+            </div>
+          </div>
+          <div class="left-header-search">
+            <button class="back-from-search-btn">
+              <i class="fa fa-arrow-left"></i>
+            </button>
+            <input
+              type="search"
+              name="search-note"
+              id="search-note"
+              placeholder="Search your notes"
+            />
+          </div>
+        </div>
+
+        <div class="middle-header">
+          <button class="add-note-btn">
+            <i class="fa fa-plus"></i>
+            <small class="add-note-btn-msg">add note</small>
+          </button>
+        </div>
+
+        <div class="right-header">
+          <div class="slogan">
+            <h1>I keep safe</h1>
+          </div>
+        </div>
+      </div>
+
+      <!-- notes container -->
+      <div class="notes-container">
+        <div class="notes-top">
+          <div class="notes-top-left">
+            <div>
+              <button class="select-btn">Select</button>
+              <button class="cancel-btn">cencel</button>
+              <button class="select-all-btn">Select All</button>
+            </div>
+          </div>
+          <div class="notes-top-right">
+            <div class="selected-note-operation-buttons">
+              <button class="selected-note-delete">
+                <i class="fa fa-trash"></i>
+                <small class="selected-note-delete-btn-msg"
+                  >delete selected notes</small
+                >
+              </button>
+              <button class="selected-note-highlight">
+                <i class="fa fa-highlighter"></i>
+                <small class="selected-note-highlight-btn-msg"
+                  >highlight selected notes</small
+                >
+              </button>
+              <button class="selected-note-minimize">
+                <i class="fa-solid fa-arrow-down-long"></i>
+                <i class="fa-regular fa-square"></i>
+                <i class="fa-regular fa-square"></i>
+                <small class="selected-note-minimize-btn-msg"
+                  >minimize selected notes</small
+                >
+              </button>
+
+              <button class="selected-note-maximize">
+                <i class="fa-solid fa-arrow-down-long"></i>
+                <i class="fa-regular fa-square"></i>
+                <i class="fa-regular fa-square"></i>
+                <small class="selected-note-maximize-btn-msg"
+                  >maximize selected notes</small
+                >
+              </button>
+              <button class="selected-note-pin">
+                <i class="fa-solid fa-thumbtack"></i>
+                <small class="selected-note-pin-btn-msg"
+                  >pin selected notes</small
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="notes-bottom">
+          <div class="empty-msg">
+            <h3>There are no notes here</h3>
+          </div>
+        </div>
+
+        <!-- trash -->
+        <div class="trash-container">
+          <div class="trash-container-top">
+            <div class="trash-container-top-left">
+              <button class="select-trash-btn">Select</button>
+              <button class="cancel-trash-btn">Cancel</button>
+              <button class="select-all-trash-btn">Select all</button>
+            </div>
+            <div class="trash-container-top-middle">
+              <h3>Trashlist</h3>
+            </div>
+            <div class="trash-container-top-right">
+              <button class="restore-trash-btn">Restore</button>
+              <button class="delete-trash-forever-btn">Delete forever</button>
+            </div>
+          </div>
+          <div class="trash-container-bottom">
+            <div class="trash-msg">
+              <h3>Notes you deleted will be appear here</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- highlighted -->
+        <div class="highlighted-container">
+          <div class="highlighted-container-top">
+            <div class="highlighted-container-top-left">
+              <button class="select-highlighted-btn">Select</button>
+              <button class="cancel-highlighted-btn">Cancel</button>
+              <button class="select-all-highlighted-btn">Select All</button>
+            </div>
+            <div class="highlighted-container-top-middle">
+              <h3>Highlighted Notes</h3>
+            </div>
+            <div class="highlighted-container-top-right">
+              <button class="unhighlight-selected-notes-btn">
+                Unhighlight
+              </button>
+            </div>
+          </div>
+          <div class="highlighted-container-bottom">
+            <div class="highlight-msg">
+              <h3>Only highlighted notes will be appear here</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- pinned -->
+        <div class="pinned-container">
+          <div class="pinned-container-top">
+            <div class="pinned-container-top-left">
+              <button class="select-pinned-btn">Select</button>
+              <button class="cancel-pinned-btn">Cancel</button>
+              <button class="select-all-pinned-btn">Select all</button>
+            </div>
+            <div class="pinned-container-top-middle">
+              <h3>Pinned Notes</h3>
+            </div>
+            <div class="pinned-container-top-right">
+              <button class="unpin-pinned-btn">Unpin</button>
+            </div>
+          </div>
+          <div class="pinned-container-bottom">
+            <div class="pinned-msg">
+              <h3>Only pinned notes will be appear here</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- settings -->
+        <div class="settings-container">
+          <h3 class="settings-header">Settings</h3>
+
+          <div class="setting-options">
+            <div class="setting-option shadow-sm bradius-1">
+              <label>Show instraction texts, when hover buttons</label>
+              <div class="wrapper">
+                <button
+                  class="show-instraction-text-toggle toggle-btn bg-skyblue"
+                >
+                  <div class="toggle-on"></div>
+                </button>
+              </div>
+            </div>
+
+            <div class="setting-option shadow-sm bradius-1">
+              <label>Animations</label>
+              <div class="wrapper">
+                <button class="animations-toggle toggle-btn bg-skyblue">
+                  <div class="toggle-on"></div>
+                </button>
+              </div>
+            </div>
+
+            <div class="setting-option shadow-sm bradius-1">
+              <label>Enable dark mode</label>
+              <div class="wrapper">
+                <button class="enable-dark-mode-toggle toggle-btn bg-skyblue">
+                  <div class="toggle-on"></div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- add note card container -->
+    <div class="add-note-card-container">
+      <div class="add-note-card">
+        <div class="top">
+          <div class="back-btn-top-left">
+            <button class="add-note-card-back-btn btn-hover">
+              <i class="fa fa-arrow-left"></i>
+            </button>
+          </div>
+
+          <div class="top-middle">
+            <div class="size">
+              <label for="select-size">Text size</label>
+              <select name="select-size" id="select-size">
+                <option value="16px">Normal</option>
+                <option value="12px">12px</option>
+                <option value="14px">14px</option>
+                <option value="16px">16px (nor)</option>
+                <option value="18px">18px</option>
+                <option value="20px">20px</option>
+                <option value="22px">22px</option>
+                <option value="24px">24px</option>
+              </select>
+            </div>
+            <div class="color">
+              <label for="select-color">Text color</label>
+              <select name="select-color" id="select-color">
+                <option value="black">Black</option>
+                <option value="white">White</option>
+                <option value="red">Red</option>
+                <option value="green">Green</option>
+                <option value="blue">Blue</option>
+                <option value="yellow">Yellow</option>
+                <option value="pink">Pink</option>
+                <option value="purple">Purple</option>
+              </select>
+            </div>
+          </div>
+          <div class="top-right">
+            <button class="save-btn-hover" id="add-note-btn">Add</button>
+          </div>
+        </div>
+
+        <div class="bottom">
+          <div class="title">
+            <input
+              type="text"
+              name="notes-title"
+              id="notes-title"
+              placeholder="Set a title..."
+              autocomplete="off"
+            />
+          </div>
+          <div class="description">
+            <textarea
+              name="notes-description"
+              id="notes-description"
+              placeholder="Write your note..."
+            ></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- edit note card container -->
+    <div class="edit-note-card-container">
+      <div class="edit-note-card">
+        <div class="edit-note-card-top">
+          <div class="edit-note-card-top-left">
+            <button class="edit-note-card-back-btn">
+              <i class="fa fa-arrow-left"></i>
+            </button>
+          </div>
+          <div class="edit-note-card-top-middle">
+            <div>
+              <div class="size-edit">
+                <label for="select-size-edit">Text size</label>
+                <select name="select-size-edit" id="select-size-edit">
+                  <option value="16px">Normal</option>
+                  <option value="12px">12px</option>
+                  <option value="14px">14px</option>
+                  <option value="16px">16px (nor)</option>
+                  <option value="18px">18px</option>
+                  <option value="20px">20px</option>
+                  <option value="22px">22px</option>
+                  <option value="24px">24px</option>
+                </select>
+              </div>
+              <div class="color-edit">
+                <label for="select-color-edit">Text color</label>
+                <select name="select-color-edit" id="select-color-edit">
+                  <option value="black">Black</option>
+                  <option value="white">White</option>
+                  <option value="red">Red</option>
+                  <option value="green">Green</option>
+                  <option value="blue">Blue</option>
+                  <option value="yellow">Yellow</option>
+                  <option value="pink">Pink</option>
+                  <option value="purple">Purple</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="edit-note-card-top-right">
+            <button class="edit-note-save-changes-btn">Save changes</button>
+          </div>
+        </div>
+        <div class="edit-note-card-bottom">
+          <div class="title-edit">
+            <input type="text" id="notes-title-edit" name="notes-title-edit" />
+          </div>
+          <div class="description-edit">
+            <textarea
+              name="description-edit"
+              id="notes-description-edit"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- navigation menu -->
+    <div class="navigation-menu-container">
+      <div class="navigation-menu">
+        <div class="navigation-menu-top">
+          <button class="navigation-menu-back-btn">
+            <i class="fa-solid fa-bars"></i>
+            <small class="navigation-menu-back-btn-msg"
+              >Close navigation menu</small
+            >
+          </button>
+          <h1>I keep Safe</h1>
+        </div>
+        <div class="navigation-menu-bottom">
+          <ul class="navlist">
+            <li>
+              <button id="btn-notes" class="active">
+                <i class="fa-regular fa-note-sticky"></i>
+                Notes
+              </button>
+            </li>
+            <li>
+              <button id="btn-trash">
+                <i class="fa-solid fa-trash-can"></i>Trash
+              </button>
+            </li>
+            <li>
+              <button id="btn-highlighted">
+                <i class="fa fa-highlighter"></i> Highlighted
+              </button>
+            </li>
+            <li>
+              <button id="btn-pinned">
+                <i class="fa-solid fa-thumbtack"></i> Pinned
+              </button>
+            </li>
+            <li>
+              <button id="btn-settings">
+                <i class="fa-solid fa-gear"></i> Settings
+              </button>
+            </li>
+            <li>
+              <button id="btn-help">
+                <i class="fa-regular fa-circle-question"></i> helps & feedback
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
