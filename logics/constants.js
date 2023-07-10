@@ -52,14 +52,7 @@ const selectedNotePinBtn = document.querySelector(".selected-note-pin");
 const notesTop = document.querySelector(".notes-top");
 const notesContainer = document.querySelector(".notes-container");
 const notesBottom = document.querySelector(".notes-bottom");
-// const noteContainer = document.querySelector(".note-container");
-// const noteTopLeftCheckbox = document.querySelector(".note-top-left-checkbox");
-// const threeDotBtn = document.querySelector(".three-dot");
-// const noteTopRightButtons = document.querySelector(".note-top-right-buttons");
-// const noteEditBtn = document.querySelector(".note-edit-btn");
-// const noteDeleteBtn = document.querySelector(".note-delete-btn");
-// const noteTitle = document.querySelector(".note-title");
-// const noteDescription = document.querySelector(".note-description");
+
 const addNoteCardContainer = document.querySelector(".add-note-card-container");
 const addNoteCard = document.querySelector(".add-note-card");
 const addNoteCardBackBtn = document.querySelector(".add-note-card-back-btn");
